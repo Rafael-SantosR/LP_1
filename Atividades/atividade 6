@@ -1,0 +1,60 @@
+6. Escolher dois pontos de comércio (loja de sapato, feira livre, 
+farmácia, concessionária de carro ou moto, loja de roupas, etc), 
+verificar os objetos vendidos e  realizar a abstração deles.
+
+
+
+public class Moto {
+    private String modelo;
+    private String cor;
+    private int ano;
+    private String marca;
+    private String cilindradas;
+
+
+    public Moto(String modelo, String cor, int ano, String marca, String cilindradas) {
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ano = ano;
+        this.marca = marca;
+        this.cilindradas = cilindradas;
+    }
+
+}
+public class Main{
+   public static void main(String[] args){
+       Moto Y = new Moto("Fz25","preta",2020,"Yamaha","250");
+   }
+}
+
+
+
+
+
+
+
+public class Carro {
+    private String modelo;
+    private String cor;
+    private int ano;
+    private String marca;
+    private String placa;
+
+
+    public Carro(String modelo, String cor, int ano, String marca, String placa) {
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ano = ano;
+        this.marca = marca;
+        this.placa = placa;
+    }
+
+}
+public class Main{
+   public static void main(String[] args){
+       Carro g = new Carro("Gol","prata",2010,"VW","ELP3C27");
+   }
+}
+
+
+
