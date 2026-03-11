@@ -1,0 +1,23 @@
+public class Fralda {
+
+    public String marca;
+    public String cor;
+    public int quantidade;
+
+
+    public Fralda(String marca, String cor, int quantidade) {
+        this.marca = marca;
+        this.cor = cor;
+        this.quantidade = quantidade;
+
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void mudarMarca(String marca) {
+        this.marca = marca;
+        System.out.println("Marca mudado");
+    }
+}
