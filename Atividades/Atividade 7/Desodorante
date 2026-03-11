@@ -1,0 +1,40 @@
+public class Desodorante {
+
+    private String marca;
+    private int duracao;
+    private int ml;
+
+
+    public Desodorante(String marca, int duracao, int ml){
+        this.marca = marca;
+        this.duracao = duracao;
+        this.ml = ml;
+
+    }
+
+    public int getDuracao(){
+        return duracao;
+    }
+
+    public void setDuracao(int duracao){
+        this.duracao = duracao;
+    }
+
+    public void aumentarDuracao(int duracao){
+        this.duracao += duracao;
+    }
+
+    public void diminuirDuracao(int duracao){
+        this.duracao -= duracao;
+    }
+
+    public void zerarMl(){
+        this.ml = 0;
+    }
+
+    public int getMl(){
+        return ml;
+    }
+
+
+}
