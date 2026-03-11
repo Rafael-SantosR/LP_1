@@ -1,0 +1,22 @@
+void main(){
+    Desodorante rexona = new Desodorante("Rexona",8,200);
+
+    System.out.println(rexona.getDuracao());
+    rexona.aumentarDuracao(9);
+    System.out.println(rexona.getDuracao());
+    System.out.println(rexona.getMl());
+    rexona.zerarMl();
+    System.out.println(rexona.getMl());
+
+
+    Neston neston = new Neston("Mingau","aveia",500);
+    System.out.println(neston.getSabor());
+    neston.mudarSabor("Morango com cacau");
+
+    System.out.println(neston.getSabor());
+
+
+
+    Fralda fralda = new Fralda("Pampers","branca",24);
+
+}
