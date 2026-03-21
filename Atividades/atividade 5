@@ -1,2 +1,76 @@
 5. Programa que leia as notas e calcule a média de LP1 deste 
 semestre, referente a um determinado aluno.
+
+
+public class Aluno {
+    private String nome;
+    private NotasLP1 notas;
+
+    public Aluno(String nome, NotasLP1 notas) {
+        this.nome = nome;
+        this.notas = notas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public NotasLP1 getNotas() {
+        return notas;
+    }
+
+    public void setNotas(NotasLP1 notas) {
+        this.notas = notas;
+    }
+    public double getMediaFinal() {
+        return this.notas.calcularMediaFinal();
+    }
+}
+
+
+
+
+public class Notas {
+    private double p1, e1, e2, x, sub, api, exf;
+
+    public Notas(double p1, double e1, double e2, double x, double sub, double api, double exf) {
+        this.p1 = p1;
+        this.e1 = e1;
+        this.e2 = e2;
+        this.x = x;
+        this.sub = sub;
+        this.api = api;
+        this.exf = exf;
+    }
+
+    public double calcularMediaFinal() {
+        double termoBase = (p1 * 0.5) + (e1 * 0.2) + (e2 * 0.3) + x + (sub * 0.15);
+
+        double diff = termoBase - 5.9;
+        double interruptor = (diff > 0) ? 1.0 : 0.0;
+
+        double calculoComBonus = (termoBase * 0.5) + (interruptor * api * 0.5);
+
+        return Math.min(10.0, Math.max(calculoComBonus, exf));
+    }
+}
+
+
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        NotasLP1 notasMatheus = new NotasLP1(8.0, 1.0, 7.5, 1.0, 0, 9.0, 0);
+
+        Aluno aluno = new Aluno("Matheus Quirino", notasMatheus);
+
+        System.out.println("Aluno: " + aluno.getNome());
+        System.out.printf("Média Atual: %.2f%n", aluno.getMediaFinal());
+    }
+}
