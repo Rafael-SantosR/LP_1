@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #333;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <tabs>
+      <Tab text="Menu">
+         <content>
+            <AnchorPane prefHeight="275.0" prefWidth="400.0" style="-fx-background-color: #e8f1f9;">
+               <children>
+                  <Label layoutX="80.0" layoutY="30.0" prefHeight="79.0" prefWidth="241.0" style="-fx-font-weight: bold;" text="Gerenciamento Farmácia" textAlignment="CENTER">
+                     <font><Font size="20.0" /></font>
+                  </Label>
+                  <Button layoutX="123.0" layoutY="115.0" onAction="#irParaNeston" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-border-radius: 15; -fx-background-radius: 15;" text="Neston" />
+                  <Button layoutX="123.0" layoutY="170.0" onAction="#irParaFralda" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-border-radius: 15; -fx-background-radius: 15;" text="Fraldas" />
+                  <Button layoutX="123.0" layoutY="225.0" onAction="#irParaDesodorante" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-border-radius: 15; -fx-background-radius: 15;" text="Desodorantes" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+
+      <Tab text="Neston">
+         <content>
+            <AnchorPane prefHeight="275.0" prefWidth="400.0" style="-fx-background-color: #e8f1f9;">
+               <children>
+                  <Label layoutX="110.0" layoutY="20.0" text="Registro de Neston"><font><Font name="System Bold" size="22.0" /></font></Label>
+                  <Label layoutX="40.0" layoutY="75.0" text="Sabor"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldSaborNeston" layoutX="140.0" layoutY="73.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+                  <Label layoutX="40.0" layoutY="115.0" text="Cor"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldCorNeston" layoutX="140.0" layoutY="113.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+                  <Label layoutX="40.0" layoutY="155.0" text="Tamanho"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldTamNeston" layoutX="140.0" layoutY="153.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+
+                  <Button layoutX="150.0" layoutY="202.0" onAction="#registrarNeston" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 10; -fx-border-radius: 10;" text="Registrar" />
+
+                  <Button layoutX="40.0" layoutY="255.0" onAction="#acaoVitamina" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Vitamina" />
+                  <Button layoutX="160.0" layoutY="255.0" onAction="#acaoValidade" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Validade" />
+                  <Button layoutX="280.0" layoutY="255.0" onAction="#acaoEstoque" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Estoque" />
+
+                  <TextArea fx:id="txtNeston" layoutX="40.0" layoutY="300.0" prefHeight="55.0" prefWidth="320.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+
+      <Tab text="Fralda">
+         <content>
+            <AnchorPane prefHeight="275.0" prefWidth="400.0" style="-fx-background-color: #e8f1f9;">
+               <children>
+                  <Label layoutX="110.0" layoutY="20.0" text="Registro de Fralda"><font><Font name="System Bold" size="22.0" /></font></Label>
+                  <Label layoutX="40.0" layoutY="75.0" text="Marca"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldMarcaFralda" layoutX="140.0" layoutY="73.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+                  <Label layoutX="40.0" layoutY="115.0" text="Tam."><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldTamFralda" layoutX="140.0" layoutY="113.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+                  <Label layoutX="40.0" layoutY="155.0" text="Qtd."><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldQtdFralda" layoutX="140.0" layoutY="153.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+
+                  <Button layoutX="150.0" layoutY="202.0" onAction="#registrarFralda" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 10; -fx-border-radius: 10;" text="Registrar" />
+
+                  <Button layoutX="40.0" layoutY="255.0" onAction="#acaoAbsorcao" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Absorção" />
+                  <Button layoutX="160.0" layoutY="255.0" onAction="#acaoTamanho" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Tamanho" />
+                  <Button layoutX="280.0" layoutY="255.0" onAction="#acaoPacote" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Pacote" />
+
+                  <TextArea fx:id="txtFralda" layoutX="40.0" layoutY="300.0" prefHeight="55.0" prefWidth="320.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+
+      <Tab text="Desodorante">
+         <content>
+            <AnchorPane prefHeight="275.0" prefWidth="400.0" style="-fx-background-color: #e8f1f9;">
+               <children>
+                  <Label layoutX="80.0" layoutY="20.0" text="Registro de Desodorante"><font><Font name="System Bold" size="22.0" /></font></Label>
+                  <Label layoutX="40.0" layoutY="75.0" text="Marca"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldMarcaDeso" layoutX="140.0" layoutY="73.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+                  <Label layoutX="40.0" layoutY="115.0" text="Duração"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldDuracaoDeso" layoutX="140.0" layoutY="113.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+                  <Label layoutX="40.0" layoutY="155.0" text="ML"><font><Font size="16.0" /></font></Label>
+                  <TextField fx:id="fieldMlDeso" layoutX="140.0" layoutY="153.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+
+                  <Button layoutX="150.0" layoutY="202.0" onAction="#registrarDesodorante" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 10; -fx-border-radius: 10;" text="Registrar" />
+
+                  <Button layoutX="40.0" layoutY="255.0" onAction="#acaoProtecao" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Proteção" />
+                  <Button layoutX="160.0" layoutY="255.0" onAction="#acaoFragrancia" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Aroma" />
+                  <Button layoutX="280.0" layoutY="255.0" onAction="#acaoSpray" prefWidth="80.0" style="-fx-background-color: #d9d7ef; -fx-border-color: #1f252f; -fx-background-radius: 8; -fx-border-radius: 8;" text="Spray" />
+
+                  <TextArea fx:id="txtDesodorante" layoutX="40.0" layoutY="300.0" prefHeight="55.0" prefWidth="320.0" style="-fx-border-color: #888; -fx-border-radius: 5;" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
